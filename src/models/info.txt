@@ -1,0 +1,1 @@
+En la carpeta models lo que estoy colocando sera el codigo para definir los esquemas de la informacion gestionada con mongodb, lo que significa que podre controlar el flujo de datos que ingresa desde los formularios y se van a la base de datos.

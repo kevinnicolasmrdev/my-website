@@ -1,0 +1,1 @@
+En esta carpeta desarrollo las funciones que seran las que controlen que aparece en cada ruta.

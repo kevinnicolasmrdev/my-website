@@ -1,0 +1,3 @@
+Esto nos sirve para definir que rutas estan protegidas por usuarios autentificados.
+
+Las funciones que creamos aca se validan antes de llegar a las rutas, lo que nos ayuda a definir bloqueos de seguridad.
