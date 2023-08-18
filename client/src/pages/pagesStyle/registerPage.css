@@ -1,0 +1,14 @@
+.formRegister{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.formRegister input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.489);
+
+}
