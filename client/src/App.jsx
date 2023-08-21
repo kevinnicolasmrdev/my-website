@@ -9,17 +9,21 @@ import Dashboard from './pages/Dashboard.jsx'
 import ProjectFormPage from './pages/ProjectFormPage.jsx'
 import ProjectPage from './pages/ProjectPage.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
+import {ProjectProvider} from './contexto/ProjectContext.jsx'
+import NavBar from './components/NavBar.jsx'
 
 function App() {
   return (
     <AuthProvider>
+    <ProjectProvider>
       <BrowserRouter>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/project" element={<ProjectPage/>}/>
-        <Route path="/project/:id" element={<ProjectFormPage/>}/>
+        <Route path="/project/:id" element={<ProjectPage/>}/>
 
         
         <Route element={<ProtectedRoute/>}>
@@ -28,6 +32,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </ProjectProvider>
     </AuthProvider>
   );
 }

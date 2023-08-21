@@ -1,0 +1,42 @@
+.navBarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navBar{
+    display: flex;
+    background-color: rgba(24, 22, 22, 0.676);
+    border-radius: 20px;
+    padding: 2px 50px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: white;
+}
+
+.item{
+    display: flex;
+    padding: 0px 10px;
+}
+
+.item li{
+    display: flex;
+    padding: 0px 10px;
+}
+
+.item li a{
+    text-decoration: none;
+    color: white;
+}
+
+.iconNav{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+

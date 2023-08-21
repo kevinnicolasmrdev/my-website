@@ -13,12 +13,9 @@ function RegisterPage() {
     const navigation = useNavigate();
 
 
-    useEffect(() => {
-        if (isAuthenticated) navigation('/dashboard')
-    }, [isAuthenticated])
-
     const onSubmit = handleSubmit(async (values) => {
         signup(values);
+        navigation('/dashboard')
     });
 
 

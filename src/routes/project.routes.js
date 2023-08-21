@@ -15,14 +15,12 @@ const router = Router();
 router.get(
   "/project",
   authRequired,
-  validateSchema(createProjectSchema),
   getProjects
 );
 
 router.get(
   "/project/:id",
   authRequired,
-  validateSchema(createProjectSchema),
   getProject
 );
 
@@ -36,14 +34,12 @@ router.post(
 router.delete(
   "/project/:id",
   authRequired,
-  validateSchema(createProjectSchema),
   deleteProject
 );
 
 router.put(
   "/project/:id",
   authRequired,
-  validateSchema(createProjectSchema),
   upgradeProject
 );
 

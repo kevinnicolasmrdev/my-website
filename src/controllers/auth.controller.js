@@ -2,6 +2,8 @@ import User from "../models/user.model.js";
 /*traemos el modelo del Usuario y le ponemos los datos */
 import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
+import jwt from 'jsonwebtoken';
+import { TOKEN_SECRET} from '../config.js'
 
 // Rutas del login
 export const register = async (req, res) => {
@@ -78,3 +80,24 @@ export const dashboard = async (req, res) => {
 
   res.send("Dashboard");
 };
+
+
+export const verify = async (req,res)=>{
+  const {token} = req.cookies;
+
+  if(!token) return res.status(401).json({message:"Unauthorized"})
+  
+  jwt.verify(token, TOKEN_SECRET, async (err, user)=>{
+    if(err) return res.status(401).json({message:"Unauthorized"})
+
+    const userFound = await User.findById(user.id)
+    if(!userFound) return res.status(401).json({message:"Unauthorized"})
+
+    return res.json({
+      id: userFound._id,
+      email: userFound.email,
+      username: userFound.username
+    })
+
+  })
+}
