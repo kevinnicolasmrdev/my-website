@@ -3,6 +3,8 @@ import {
     createProjectRequest,
     deleteProjectRequest,
     getProjectsRequest,
+    getProjectRequest,
+    updateProjectRequest
 } from "../api/project";
 
 const ProjectContext = createContext();
@@ -47,13 +49,35 @@ export function ProjectProvider({ children }) {
         }
     };
 
+    const getProject = async (id) =>{
+        try {
+            const res  = await getProjectRequest(id)
+            return res.data
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+    const updateProject = async (id, project)=>{
+        try {
+            await updateProjectRequest(id, project)
+
+        } catch (error) {
+            console.log(error)
+        }
+        }
+
+      
     return (
         <ProjectContext.Provider
             value={{
                 projects,
                 createProject,
                 getProjects,
+                getProject,
                 deleteProject,
+                updateProject,
             }}
         >
             {children}

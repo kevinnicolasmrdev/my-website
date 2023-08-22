@@ -11,6 +11,7 @@ function ProjectPage() {
     getProjects();
   }, [getProjects]);
 
+
   if(projects.length === 0) return(<h1>No Projects</h1>)
 
   return (

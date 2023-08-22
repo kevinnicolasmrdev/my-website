@@ -1,16 +1,36 @@
+import { useEffect } from "react";
 import { useProject } from "../contexto/ProjectContext.jsx";
 import "./pagesStyle/projectFormPage.css";
 import { useForm } from "react-hook-form";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 
 function ProjectFormPage() {
   const { register, handleSubmit } = useForm();
-  const {createProject} = useProject();
+  const {createProject, getProject, updateProject} = useProject();
   const navigate = useNavigate()
+  const params = useParams();
+
+  useEffect(()=>{
+    async function loadProject(){
+     if(params.id){
+       await getProject(params.id)
+     }
+    }
+   loadProject()
+   },[])
+
+
+
 
   const onSubmit = handleSubmit((data)=>{
+   if(params.id){
+    updateProject(params.id, data)
+   }else{
     createProject(data)
-    navigate('/project')
+     }
+    
+     navigate('/project')
+
   })
 
   return (
