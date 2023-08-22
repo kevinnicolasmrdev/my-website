@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { string } from 'zod';
 
 const projectSchema = new mongoose.Schema({
     title: {

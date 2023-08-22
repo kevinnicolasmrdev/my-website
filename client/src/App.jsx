@@ -1,4 +1,4 @@
-import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {AuthProvider} from './contexto/AuthContext.jsx'
 
@@ -11,12 +11,15 @@ import ProjectPage from './pages/ProjectPage.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
 import {ProjectProvider} from './contexto/ProjectContext.jsx'
 import NavBar from './components/NavBar.jsx'
+import './styles/app.css'
+
 
 function App() {
   return (
     <AuthProvider>
     <ProjectProvider>
       <BrowserRouter>
+      <main className="containerMain">
       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
@@ -31,6 +34,7 @@ function App() {
            <Route path="/add-project" element={<ProjectFormPage/>} />
         </Route>
       </Routes>
+      </main>
     </BrowserRouter>
     </ProjectProvider>
     </AuthProvider>

@@ -30,10 +30,8 @@ export function ProjectProvider({ children }) {
 
     const createProject = async (project) => {
         const res = await createProjectRequest(project);
+        console.log(res)
     };
-
-
-
 
     const deleteProject = async (id) => {
         try {

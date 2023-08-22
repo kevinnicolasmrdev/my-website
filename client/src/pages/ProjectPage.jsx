@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useProject } from "../contexto/ProjectContext";
-import "./pagesStyle/projectPage.css";
 import ProjectCard from '../components/ProjectCard'
+import './pagesStyle/projectPage.css'
+
 
 function ProjectPage() {
   const { getProjects, projects } = useProject();

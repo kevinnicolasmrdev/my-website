@@ -8,7 +8,7 @@ export const createProjectSchema = z.object({
         required_error: 'Description is required'
     }),
     urlProyect: z.string({
-        required_error: 'URL is required'
+        required_error: 'The Project URL is required'
     }),
     IMG: z.string({
         required_error: 'url img is required'
