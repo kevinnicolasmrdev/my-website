@@ -15,11 +15,11 @@ function navBar() {
         <ul className="item">
           {isAuthenticated ? (
             <>
-              <li>
-                <Link to="/project">View projects</Link>
+               <li >
+                <Link to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <Link to="/add-project">Add projects</Link>
+                <Link to="/project">View projects</Link>
               </li>
               <li>
                 <Link to="/" onClick={() => {
@@ -29,6 +29,9 @@ function navBar() {
             </>
           ) : (
             <>
+              <li >
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
               <li >
                 <Link to="/login">Login</Link>
               </li>

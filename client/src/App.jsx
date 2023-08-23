@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import ProjectFormPage from './pages/ProjectFormPage.jsx'
 import ProjectPage from './pages/ProjectPage.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
+import PortfolioPage from './pages/Portfolio.jsx'
 import { ProjectProvider } from './contexto/ProjectContext.jsx'
 import NavBar from './components/NavBar.jsx'
 import './styles/app.css'
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
 
 
               <Route element={<ProtectedRoute />}>

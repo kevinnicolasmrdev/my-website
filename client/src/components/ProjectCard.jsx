@@ -7,27 +7,38 @@ function ProjectCard({ project }) {
   const { deleteProject } = useProject();
 
   return (
-    <div className="proyectos">
-      <div className="proyectosData">
-        <button
-          onClick={() => {
-            deleteProject(project._id);
-          }}
-        >
-          <AiFillCloseCircle />
-        </button>
-        <Link to={`/project/${project._id}`}>
-          <AiFillEdit />
-        </Link>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </div>
-      <div className="imgContainer">
-        <a target="_blank" href={project.urlProyect}>
-          <img src={project.IMG} className="imgProject" />
-        </a>
-      </div>
-    </div>
+        <table className="tables hoverCelda">
+          <tbody>
+          <tr className="filasConatiner2">
+            <td className="celdaConteiner">
+              <p>{project.title}</p>
+            </td>
+            <td className="celdaConteiner">
+              <p>{project.description}</p>
+            </td>
+            <td className="celdaConteiner">
+            <p>{project.urlProyect}</p>
+            </td>
+            <td className="celdaConteinerImage">
+            <p>{project.IMG}</p>
+            </td>
+            <td className="buttonDelete">
+            <button
+            onClick={() => {
+              deleteProject(project._id);
+            }}
+          >
+            <AiFillCloseCircle />
+          </button>
+            </td>
+            <td className="buttonEdit">
+            <Link to={`/project/${project._id}`}>
+            <AiFillEdit />
+          </Link>
+            </td>
+          </tr>
+          </tbody>
+        </table>
   );
 }
 

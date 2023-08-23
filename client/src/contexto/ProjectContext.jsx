@@ -4,11 +4,11 @@ import {
     deleteProjectRequest,
     getProjectsRequest,
     getProjectRequest,
-    updateProjectRequest
+    updateProjectRequest,
+    getPublicProjectsRequest
 } from "../api/project";
 
 const ProjectContext = createContext();
-
 export const useProject = () => {
     const context = useContext(ProjectContext);
 
@@ -20,6 +20,13 @@ export const useProject = () => {
 
 export function ProjectProvider({ children }) {
     const [projects, setProjects] = useState([]);
+
+
+
+    const getPublicProjects = async () =>{
+        const res = await getPublicProjectsRequest();
+        setProjects(res.data)
+    }
 
     const getProjects = async () => {
         try {
@@ -78,6 +85,7 @@ export function ProjectProvider({ children }) {
                 getProject,
                 deleteProject,
                 updateProject,
+                getPublicProjects,
             }}
         >
             {children}

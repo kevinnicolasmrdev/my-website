@@ -1,0 +1,42 @@
+.proyectosContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.publicProyectos{
+    width: 380px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    background: rgb(29, 27, 27);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.publicData{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 8px 10px 8px;
+    height: 20%;
+    && p{
+        margin: 0px;
+        text-align: center;
+    }
+    && h2{
+        margin: 0px;
+        text-align: center;
+    }
+}  
+
+.imgContainerPublic{
+    height: 80%;
+    overflow: hidden;
+}
+
+.imgContainerPublic a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

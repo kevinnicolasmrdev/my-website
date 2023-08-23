@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import authRoutes from './routes/auth.routes.js'
 import projectRoutes from './routes/project.routes.js'
+import portfolioRoutes from './routes/portfolio.routes.js'
 import cors from 'cors'
 
 
@@ -21,5 +22,6 @@ app.use(cookieParser());
 
 app.use("/api", authRoutes);
 app.use("/api", projectRoutes);
+app.use("/api", portfolioRoutes);
 
 export default app;

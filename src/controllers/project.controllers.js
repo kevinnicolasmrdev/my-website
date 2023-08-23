@@ -12,6 +12,18 @@ export const getProjects = async (req, res) => {
   }
 };
 
+
+export const getPublicProjects = async (req, res) =>{
+  try {
+    const projects = await projectModel.find()
+    res.json(projects);
+    console.log("Datos recibidos")
+  } catch (error) {
+    console.log(error);
+    console.log('Datos no recibidos')
+  }
+}
+
 export const getProject = async (req, res) => {
   try {
     const foundProject = await projectModel.findById(req.params.id);

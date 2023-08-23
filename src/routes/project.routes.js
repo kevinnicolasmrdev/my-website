@@ -6,6 +6,7 @@ import {
   getProject,
   getProjects,
   upgradeProject,
+  getPublicProjects
 } from "../controllers/project.controllers.js";
 import { createProjectSchema } from "../schemas/project.schema.js";
 import { validateSchema } from "../middlewares/validator.middelware.js";
@@ -42,5 +43,15 @@ router.put(
   authRequired,
   upgradeProject
 );
+
+
+
+/* Ruta Publica */
+
+router.get(
+  "/portfolio",
+  getPublicProjects,
+);
+
 
 export default router;
