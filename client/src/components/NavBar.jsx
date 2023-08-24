@@ -8,10 +8,12 @@ function navBar() {
 
   return (
     <div className="navBarContainer">
-      <nav className="navBar">
-        <Link to="/" className="iconNav">
+      <nav className={isAuthenticated ? 'navBarUser':'navBar'}>
+        <div className="iconNavContainer">
+        <Link to="/" className={isAuthenticated ? 'iconNavUser':'iconNav'}>
           {isAuthenticated ? (user.username):(<BiUserCircle />)}
         </Link>
+        </div>
         <ul className="item">
           {isAuthenticated ? (
             <>
@@ -19,7 +21,7 @@ function navBar() {
                 <Link to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <Link to="/project">View projects</Link>
+                <Link to="/project">Proyects</Link>
               </li>
               <li>
                 <Link to="/" onClick={() => {
@@ -29,8 +31,11 @@ function navBar() {
             </>
           ) : (
             <>
-              <li >
+              <li>
                 <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li >
+                <Link to="/contacto">Contacto</Link>
               </li>
               <li >
                 <Link to="/login">Login</Link>
