@@ -1,0 +1,11 @@
+
+
+.footerGeneralContainer{
+    width: 100%;
+    margin-top: 50px;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    background-color: rgb(16, 18, 19);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.418);
+    display: flex;
+}

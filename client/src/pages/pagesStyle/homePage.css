@@ -59,7 +59,7 @@
 
 .sectionServices{
     width: 100%;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -68,7 +68,7 @@
 
 .serviceContainerGeneral{
     display: flex;
-    height: 100%;
+    height: 350px;
     width: 100%;
 }
 .serviceContainer{
@@ -83,6 +83,21 @@
     border-radius: 20px;
     background-color: rgb(31, 29, 29);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    && h3{
+        text-align: center;
+    }
+    && p{
+        text-align: center;
+        padding: 0px 15px;
+    }
+    && img{
+        padding-top: 30px;
+        width: 50%;
+
+    }
 }
 
 
@@ -90,4 +105,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+/* Section About Me*/
+
+
+.sectionAboutMe{
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.imgContainerAboutMe{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0% 3%;
+
+}
+
+.imgContainer{
+    width: 90%;
+    overflow: hidden;
+    && img{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+
+
+
+.textContainerAboutMe{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.aboutMe{
+    padding: 10% 20%  10% 0%;
+}
+
+
+
+/* Section Tecnologias */
+
+.sectionTecnologias{
+    padding-top: 200px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(16, 18, 19);
 }

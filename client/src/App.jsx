@@ -12,6 +12,7 @@ import ProtectedRoute from './ProtectedRoute.jsx'
 import PortfolioPage from './pages/Portfolio.jsx'
 import { ProjectProvider } from './contexto/ProjectContext.jsx'
 import NavBar from './components/NavBar.jsx'
+import Footer from './components/Footer.jsx'
 import './styles/app.css'
 
 
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/add-project" element={<ProjectFormPage />} />
               </Route>
             </Routes>
+            <Footer/>
           </main>
         </BrowserRouter>
       </ProjectProvider>

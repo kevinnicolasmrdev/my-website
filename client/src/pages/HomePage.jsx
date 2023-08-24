@@ -1,4 +1,6 @@
 import './pagesStyle/homePage.css'
+import InterfacesWeb from './media/image/sitio-web.png'
+import aboutMe from './media/image/kevinmedina.jpeg'
 
 function HomePage() {
   return (
@@ -25,16 +27,48 @@ function HomePage() {
         </div>
         <div className='serviceContainerGeneral'>
           <div className='serviceContainer'>
-            <div className='service'></div>
+            <div className='service'>
+              <h3>Interfaces web</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              <img src={InterfacesWeb}/>
+            </div>
           </div>
           <div className='serviceContainer'>
-            <div className='service'></div>
+            <div className='service'>
+            <h3>Tiendas Online</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <img src={InterfacesWeb}/>
+            </div>
           </div>
           <div className='serviceContainer'>
-            <div className='service'></div>
+            <div className='service'>
+            <h3>Solucion de Problemas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <img src={InterfacesWeb}/>
+            </div>
           </div>
           <div className='serviceContainer'>
-            <div className='service'></div>
+            <div className='service'>
+            <h3>Actualizaciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <img src={InterfacesWeb}/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='sectionTecnologias'>
+        Tecnologias
+      </section>
+      <section className='sectionAboutMe'>
+        <div className='imgContainerAboutMe'>
+          <div className='imgContainer'>
+            <img src={aboutMe }alt='kevinMedina'/>
+          </div>
+        </div>
+        <div className='textContainerAboutMe'>
+          <div className='aboutMe'>
+            <h3>Kevin Medina</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, distinctio quisquam veniam temporibus molestiae blanditiis quod. Doloremque voluptates, nisi veniam veritatis iure eveniet, quaerat, quisquam quis dignissimos commodi explicabo asperiores!</p>
           </div>
         </div>
       </section>
