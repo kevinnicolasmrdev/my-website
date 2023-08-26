@@ -44,7 +44,6 @@ function LoginPage() {
         {errors.password && <p>Falta la contra</p>}
 
         <button type="submit">Login</button>
-        <p>Usar el usuario de prueba</p>
       </form>
     </div>
   );

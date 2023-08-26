@@ -21,7 +21,7 @@ function navBar() {
                 <Link to="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <Link to="/project">Proyects</Link>
+                <Link to="/project">Proyectos</Link>
               </li>
               <li>
                 <Link to="/" onClick={() => {
@@ -35,7 +35,7 @@ function navBar() {
                 <Link to="/portfolio">Portfolio</Link>
               </li>
               <li >
-                <Link to="/contacto">Contacto</Link>
+                <Link to="http://wa.me/598096010204" target="blanck">Contacto</Link>
               </li>
               <li >
                 <Link to="/login">Login</Link>
