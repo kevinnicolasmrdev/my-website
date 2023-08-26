@@ -53,6 +53,17 @@
     justify-content: center;
 }
 
+.videoContainer{
+    && iframe{
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    }
+}
+
 
 
 /* section services */

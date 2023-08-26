@@ -3,6 +3,7 @@ import { useProject } from "../contexto/ProjectContext";
 import ProjectCard from '../components/ProjectCard'
 import '../components/componentStyle/projectCard.css'
 import { Link } from 'react-router-dom'
+import NotProject from '../components/NotProject'
 
 
 function ProjectPage() {
@@ -10,10 +11,10 @@ function ProjectPage() {
 
   useEffect(() => {
     getProjects();
-  }, [getProjects]);
+  }, []);
 
 
-  if (projects.length === 0) return (<h1>No Projects</h1>)
+  if (projects.length === 0) return <NotProject/>
 
   return (
     <div className="generalContiner">

@@ -64,3 +64,11 @@
         width: 80%;
     }
 }
+
+
+.notProject{
+    && h3{
+        text-align: center;
+
+    }
+}

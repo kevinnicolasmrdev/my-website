@@ -12,6 +12,12 @@ function PortfolioPage() {
   },[]);
 
 
+  if (projects.length === 0) return(
+    <section className="notProject">
+    <h3>No hay proyectos en este portfolio</h3>
+    </section>
+  )
+
   return (
     <div className="proyectosContainer">
       {projects.map((project) => (
