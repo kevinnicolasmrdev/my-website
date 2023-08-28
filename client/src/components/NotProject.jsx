@@ -1,4 +1,4 @@
-import GeneralButton from './components/Button'
+import GeneralButton from './Button.jsx'
 
 
 
