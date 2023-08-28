@@ -7,6 +7,7 @@ import authRoutes from './routes/auth.routes.js'
 import projectRoutes from './routes/project.routes.js'
 import portfolioRoutes from './routes/portfolio.routes.js'
 import cors from 'cors'
+import path from 'path'; // Importa el módulo path
 
 
 
@@ -23,5 +24,15 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 app.use("/api", projectRoutes);
 app.use("/api", portfolioRoutes);
+
+
+
+
+// Servir archivos estáticos y manejar rutas React
+app.use(express.static(path.join(__dirname, 'client')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'index.html'));
+});
+
 
 export default app;
