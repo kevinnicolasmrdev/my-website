@@ -14,7 +14,7 @@ import path from 'path'; // Importa el módulo path
 
 //Midelwares
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://kevinnicolasmr-six.vercel.app',
     credentials: true,
 }));
 app.use(morgan('dev'));

@@ -1,7 +1,10 @@
-/*Arranque de la aplicacion*/
-import app from './app.js'
-import {connectDB} from './db.js'
+import app from './app.js';
+import { connectDB } from './db.js';
+
+const PORT = process.env.PORT || 4000; // Utiliza un puerto proporcionado por el entorno o elige uno predeterminado
 
 connectDB();
-app.listen(4000)
-console.log("server on port", 4000)
+
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
+});
