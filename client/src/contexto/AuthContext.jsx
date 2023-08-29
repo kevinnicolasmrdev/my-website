@@ -25,7 +25,6 @@ export const AuthProvider = ({ children }) => {
     const signup = async (user) => {
         try {
             const res = await registerRequest(user);
-            console.log(res.data);
             setUser(res.data);
             setIsAuthenticated(true);
         } catch (error) {
@@ -39,11 +38,16 @@ export const AuthProvider = ({ children }) => {
             const res = await loginRequest(user);
             setIsAuthenticated(true);
             setUser(res.data);
+            console.log(res.data)
         } catch (error) {
             if (Array.isArray(error.response.data)) {
+                console.log("Hubo un error")
                 return setError(error.response.data);
+
             }
             setErrors([error.response.data.message]);
+            console.log("Hubo un error 2")
+
         }
     };
 
