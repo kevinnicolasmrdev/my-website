@@ -20,9 +20,9 @@ app.use(morgan('dev'));
 app.use(express.json())
 app.use(cookieParser());
 
-app.use("/api", authRoutes);
-app.use("/api", projectRoutes);
-app.use("/api", portfolioRoutes);
+app.use("/", authRoutes);
+app.use("/", projectRoutes);
+app.use("/", portfolioRoutes);
 
 
 
