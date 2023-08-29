@@ -24,8 +24,8 @@ function App() {
             <NavBar />
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/api/login" element={<LoginPage />} />
+              <Route path="/api/register" element={<RegisterPage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
 
 
