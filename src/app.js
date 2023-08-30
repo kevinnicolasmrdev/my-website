@@ -13,16 +13,16 @@ import cors from 'cors'
 
 //Midelwares https://kevinmedina.vercel.app/
 app.use(cors({
-    origin: 'https://kevinmedina.vercel.app/',
+    origin: 'https://kevinmedina.vercel.app',
     credentials: true,
 }));
 app.use(morgan('dev'));
 app.use(express.json())
 app.use(cookieParser());
 
-app.use("/", authRoutes);
-app.use("/", projectRoutes);
-app.use("/", portfolioRoutes);
+app.use("/api", authRoutes);
+app.use("/api", projectRoutes);
+app.use("/api", portfolioRoutes);
 
 
 
