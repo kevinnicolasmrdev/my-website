@@ -22,7 +22,7 @@ function HomePage() {
         </div>
         <div className="section1Video">
           <div className='videoContainer'>
-          <iframe width="560" height="315" src="https://www.youtube.com/watch?v=LKs7xc6Z_8E"/>
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LSdcOrFcaPs?si=MwitSgXpWxjekkNt&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </section>
