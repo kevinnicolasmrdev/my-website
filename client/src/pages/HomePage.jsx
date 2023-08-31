@@ -22,9 +22,7 @@ function HomePage() {
         </div>
         <div className="section1Video">
           <div className='videoContainer'>
-    
-
-    
+          <iframe width="560" height="315" src="https://www.youtube.com/watch?v=LSdcOrFcaPs"></iframe>
           </div>
         </div>
       </section>
