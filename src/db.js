@@ -1,5 +1,7 @@
 const uri = "mongodb+srv://kevinnicolasmr:5qG9YwHQFfSfPXAr@cluster0.elrjfaj.mongodb.net/kevinMedinaWeb";
 
+
+
 import mongoose from 'mongoose';
 
 export const connectDB =()=>{
