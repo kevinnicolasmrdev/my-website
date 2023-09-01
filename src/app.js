@@ -13,7 +13,7 @@ import cors from 'cors'
 
 //Midelwares https://kevinmedina.vercel.app/
 app.use(cors({
-    origin: 'https://kevinmedina.vercel.app',
+    origin: 'https://kevinmedina.vercel.app/',
     credentials: true,
 }));
 app.use(morgan('dev'));
