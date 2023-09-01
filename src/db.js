@@ -2,6 +2,7 @@ const uri = "mongodb+srv://kevinnicolasmr:5qG9YwHQFfSfPXAr@cluster0.elrjfaj.mong
 
 
 
+
 import mongoose from 'mongoose';
 
 export const connectDB =()=>{
