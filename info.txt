@@ -17,6 +17,7 @@ nodemo:
 
 zod:
 
+adwaw
 
 me quede en el minuto 50.42 Fazt esta componetizando las funciones de JWT para generar tokens
 
