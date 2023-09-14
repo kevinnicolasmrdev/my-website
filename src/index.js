@@ -5,6 +5,10 @@ const PORT = process.env.PORT || 4000; // Utiliza un puerto proporcionado por el
 
 connectDB();
 
+app.get('/',(req,res)=>{
+  res.send('Hello')
+})
+
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
 });
